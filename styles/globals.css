@@ -1,0 +1,24 @@
+body {
+	font-family: Arial, Helvetica, Sans-serif;
+}
+a {
+	color: darkred;
+	text-decoration: none;
+}
+a:focus,
+a:hover {
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+li {
+	display: inline;
+}
+
+li:not(:first-child) {
+	margin-left: 0.75rem;
+}
