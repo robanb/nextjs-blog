@@ -13,6 +13,7 @@ function ThemeSwitch() {
 						border: none;
 						cursor: pointer;
 						font-weight: bold;
+						color: inherit;
 					}
 				`}
 			</style>

@@ -1,8 +1,24 @@
+/* Light Theme */
+:root {
+	--background-color: white;
+	--text-color: black;
+	--link-color: darkred;
+}
+
+/* Dark Theme */
+:root {
+	--background-color: black;
+	--text-color: white;
+	--link-color: yellow;
+}
+
 body {
 	font-family: Arial, Helvetica, Sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-color);
 }
 a {
-	color: darkred;
+	color: var(--link-color);
 	text-decoration: none;
 }
 a:focus,
@@ -15,4 +31,3 @@ ul {
 	list-style-type: none;
 	padding: 0;
 }
-
