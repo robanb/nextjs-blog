@@ -11,6 +11,6 @@ function HomePage() {
 				<h1>My Blog</h1>
 			</main>
 		</>
-	);
+	)
 }
 export default HomePage;

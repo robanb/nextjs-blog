@@ -7,7 +7,7 @@ function App({ Component, pageProps }) {
 			<header>
 				<NavBar />
 			</header>
-			<Component {...pageProps} />;
+			<Component {...pageProps} />
 		</>
 	);
 }
