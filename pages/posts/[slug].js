@@ -1,13 +1,15 @@
 import Head from "next/head";
 import { getPost } from "../../lib/posts";
+import { getSlugs } from "../../lib/posts";
 
 // adding dynamic path to different pages
 export async function getStaticPaths() {
+	const slugs = await getSlugs();
 	return {
-		paths: [
-			{ params: { slug: "first-post" } },
-			{ params: { slug: "second-post" } },
-		],
+		paths: slugs.map((slug) => ({
+			params: { slug },
+		})),
+
 		fallback: false,
 	};
 }
