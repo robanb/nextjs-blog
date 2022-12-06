@@ -19,10 +19,11 @@ function PostPage({ post }) {
 	return (
 		<>
 			<Head>
-				<title>{post.title} -My Blog</title>
+				<title>{post.title}</title>
 				<meta name="description" value="This is my about page" />
 			</Head>
 			<main>
+				<p>{post.date}</p>
 				<h1>{post.title}</h1>
 				<article
 					dangerouslySetInnerHTML={{
