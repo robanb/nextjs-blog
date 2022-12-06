@@ -1,20 +1,20 @@
 import Head from "next/head";
-import { readFile } from "fs/promises";
+import { getPost } from "../../lib/posts";
 
 // Executed only in server side
 export async function getStaticProps() {
 	console.log("[FirstPostPage] getStaticProps()");
-	const data = await readFile("content/posts/first-post.json", "utf-8");
-	const post = JSON.parse(data);
+	const post = await getPost("first-post");
+
 	return {
 		props: {
-			post
+			post,
 		},
 	};
 }
 
 // Executed in client side
-function PostPage({post}) {
+function PostPage({ post }) {
 	console.log("[FirstPostPage] render: ", post);
 	return (
 		<>
@@ -24,7 +24,11 @@ function PostPage({post}) {
 			</Head>
 			<main>
 				<h1>{post.title}</h1>
-				<p>{post.body}</p>
+				<article
+					dangerouslySetInnerHTML={{
+						__html: post.body,
+					}}
+				/>
 			</main>
 		</>
 	);
