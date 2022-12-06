@@ -5,13 +5,6 @@
 	--link-color: darkred;
 }
 
-/* Dark Theme */
-:root {
-	--background-color: black;
-	--text-color: white;
-	--link-color: yellow;
-}
-
 body {
 	font-family: Arial, Helvetica, Sans-serif;
 	background-color: var(--background-color);
