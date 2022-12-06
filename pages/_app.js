@@ -6,7 +6,7 @@ function App({ Component, pageProps }) {
 	return (
 		<>
 			<Head>
-				<link rel="icon" href="icons/favicon.ico" />
+				<link rel="icon" href="/cons/favicon.ico" />
 			</Head>
 			<header>
 				<NavBar />
